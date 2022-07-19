@@ -57,7 +57,9 @@ let WaitingRooms: Map<string, string> = new Map();
 let ChattingRooms: Map<string, string> = new Map();
 
 io.on("connection", (socket: Socket) => {
+  console.log(socket.id);
   socket.on("join", () => {
+    console.log(WaitingRooms.size);
     if (WaitingRooms.size) {
       const roomName = WaitingRooms.keys().next().value;
       socket.join(roomName);
