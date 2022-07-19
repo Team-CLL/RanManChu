@@ -26,7 +26,6 @@ class RegisterAPIView(CreateAPIView):
 
 class TokenLogoutView(APIView):
     def post(self, request):
-
         # refresh token을 blacklist에 추가함 으로써 logout 구현
         refresh_token = RefreshToken(request.data['refresh_token'])
         refresh_token.blacklist()
@@ -36,3 +35,12 @@ class TokenLogoutView(APIView):
         }
 
         return Response(data=content, status=status.HTTP_200_OK)
+
+
+class UserInfoView(APIView):
+    serializer_class = UserSerializer
+
+    def get(self, request):
+        serializer = self.serializer_class(request.user)
+
+        return Response(data=serializer.data, status=status.HTTP_200_OK)
