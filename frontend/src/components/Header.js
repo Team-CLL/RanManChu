@@ -1,7 +1,7 @@
 function Header() {
     return (
         <header>
-            <div class="sticky-nav">
+            <div className="sticky-nav">
                 <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
 
                 <div id="logo">
@@ -10,7 +10,7 @@ function Header() {
 
                 <nav id="menu">
                     <ul id="menu-nav">
-                        <li class="current"><a href="#home-slider">Home</a></li>
+                        <li className="current"><a href="#home-slider">Home</a></li>
                         <li><a href="#work">Our Work</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>

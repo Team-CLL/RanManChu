@@ -1,18 +1,18 @@
 function HomepageSlider() {
     return (
         <div id="home-slider">
-            <div class="overlay"></div>
+            <div className="overlay"></div>
 
-            <div class="slider-text">
+            <div className="slider-text">
                 <div id="slidecaption"></div>
             </div>
 
-            <div class="control-nav">
-                <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
-                <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+            <div className="control-nav">
+                <a id="prevslide" className="load-item"><i className="font-icon-arrow-simple-left"></i></a>
+                <a id="nextslide" className="load-item"><i className="font-icon-arrow-simple-right"></i></a>
                 <ul id="slide-list"></ul>
 
-                <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
+                <a id="nextsection" href="#work"><i className="font-icon-arrow-simple-down"></i></a>
             </div>
         </div>
     );
