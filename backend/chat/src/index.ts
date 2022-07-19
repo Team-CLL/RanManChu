@@ -38,7 +38,10 @@ const io: Server = new Server<
   SocketData
 >(httpServer);
 
-const pubClient = createClient({ url: "redis://localhost:6379" });
+const pubClient = createClient({
+  url: "redis://localhost:6379",
+  password: process.env.REDIS_PASSWORD,
+});
 const subClient = pubClient.duplicate();
 
 Promise.all([pubClient.connect(), subClient.connect()]).then(() => {
